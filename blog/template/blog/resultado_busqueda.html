@@ -1,0 +1,10 @@
+<p>Estamos buscando el articulo: {{ articulo }}</p>
+
+{% if producto_encontrado}
+
+<ul>
+{% for articulo in producto_encontrado}
+    <li>{{articulo.nombre}} (articulo {{articulo.producto}}</li>
+{% endfor %}
+</ul>
+{% endif %}

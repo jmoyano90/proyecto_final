@@ -78,5 +78,22 @@ def procesar_fomulario_autor(request):
 def busqueda(request):
     return render(request, "blog/busqueda.html")
 
+def busqueda_2(request):
+    return render(request, "blog/busqueda_2.html")
+
 def buscar(request):
     respuesta = f"Estoy buscando el articulo: {request.GET['articulo']}"
+    
+def buscar_2(request):
+    if not request.GET['articulo']:
+        return HttpResponse("No se encuentra ese articulo, por favor busca otro")
+    else:
+        articulo = request.GET['articulo']
+        producto = producto.objects.filter(articulo=articulo)
+        
+    contexto = {
+        "articulo": articulo,
+        "producto_encontrado": producto,
+    }
+    
+    return render(request, "blog/resultado_busqueda.html", contexto)
