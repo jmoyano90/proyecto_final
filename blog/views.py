@@ -74,3 +74,9 @@ def procesar_fomulario_autor(request):
 
     contexto = {"formulario": mi_formulario}
     return render(request, "blog/formulario-autor.html", context=contexto)
+
+def busqueda(request):
+    return render(request, "blog/busqueda.html")
+
+def buscar(request):
+    respuesta = f"Estoy buscando el articulo: {request.GET['articulo']}"
