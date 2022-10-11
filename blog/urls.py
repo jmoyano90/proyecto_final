@@ -3,14 +3,16 @@ from django.contrib import admin
 from django.urls import path, include
 
 from blog.views import (
+    busqueda_articulo,
+    busqueda_seccion,
     mostrar_inicio,
     procesar_fomulario_articulo,
     procesar_fomulario_seccion,
     procesar_fomulario_autor,
-    busqueda,
-    busqueda_2,
-    buscar,
-    buscar_2,
+    busqueda_autor,
+    busqueda_articulo,
+    busqueda_seccion,
+    buscar_articulo,
 )
 
 
@@ -19,8 +21,8 @@ urlpatterns = [
     path('formulario-articulo/', procesar_fomulario_articulo),
     path('formulario-seccion/', procesar_fomulario_seccion),
     path('formulario-autor/', procesar_fomulario_autor),
-    path('busqueda/', busqueda),
-    path('busqueda_2/', busqueda_2),
-    path('buscar/', buscar),
-    path('buscar_2/', buscar_2),
+    path('busqueda_autor/', busqueda_autor),
+    path('busqueda_articulo/', busqueda_articulo),
+    path('busqueda_seccion/', busqueda_seccion),
+    path('buscar_articulo/', buscar_articulo),
 ]
