@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            "C:/Users/inaki/Desktop/ProyectoFinal/blog/template"
+            f"{BASE_DIR}/ProyectoFinal/blog/template"
         ],
         "APP_DIRS": True,
         "OPTIONS": {
