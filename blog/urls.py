@@ -19,10 +19,10 @@ from blog.views import (
 
 
 urlpatterns = [
-    path('inicio/', mostrar_inicio),
-    path('formulario-articulo/', procesar_fomulario_articulo),
-    path('formulario-seccion/', procesar_fomulario_seccion),
-    path('formulario-autor/', procesar_fomulario_autor),
+    path('inicio/', mostrar_inicio, name="Inicio"),
+    path('formulario-articulo/', procesar_fomulario_articulo, name="Articulo"),
+    path('formulario-seccion/', procesar_fomulario_seccion, name="Seccion"),
+    path('formulario-autor/', procesar_fomulario_autor, name="Autor"),
     path('busqueda_autor/', busqueda_autor),
     path('busqueda_articulo/', busqueda_articulo),
     path('busqueda_seccion/', busqueda_seccion),
