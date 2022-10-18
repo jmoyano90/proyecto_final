@@ -95,3 +95,48 @@ def buscar_autor(request):
 def buscar_seccion(request):
     respuesta = f"Estoy buscando la seccion: {request.GET['seccion']}"
     return HttpResponse(respuesta)
+
+def busqueda_autor(request):
+    return render(request, "blog/busqueda_de_autor.html")
+
+def buscar_autor(request):
+    if not request.GET["Autor"]:
+        return HttpResponse("No enviaste datos")
+    else:
+        autor_a_buscar = request.GET["Autor"]
+        autores = Autor.objects.filter(Autor=autor_a_buscar)
+        
+        contexto = {
+            "Autor": autor_a_buscar,
+            "autores_encontrados": autores
+        }
+        
+        return render(request, "blog/busqueda_autor.html", contexto)
+
+def buscar_articulo(request):
+    if not request.GET["Articulo"]:
+        return HttpResponse("No enviaste datos")
+    else:
+        articulo_a_buscar = request.GET["Articulo"]
+        articulos = Autor.objects.filter(Articulo=articulo_a_buscar)
+        
+        contexto = {
+            "Articulo": articulo_a_buscar,
+            "articulos_encontrados": articulos
+        }
+        
+        return render(request, "blog/busqueda_articulo.html", contexto)
+    
+def buscar_seccion(request):
+    if not request.GET["Seccion"]:
+        return HttpResponse("No enviaste datos")
+    else:
+        seccion_a_buscar = request.GET["Seccion"]
+        secciones = Autor.objects.filter(Seccion=seccion_a_buscar)
+        
+        contexto = {
+            "Seccion": seccion_a_buscar,
+            "secciones_encontrados": secciones
+        }
+        
+        return render(request, "blog/busqueda_seccion.html", contexto)

@@ -28,5 +28,5 @@ urlpatterns = [
     path('busqueda_seccion/', busqueda_seccion),
     path('buscar_articulo/', buscar_articulo),
     path('buscar_autor/', buscar_autor),
-    path('buscar_seccion/', buscar_seccion),
+    path('buscar_seccion/', buscar_seccion),  
 ]
