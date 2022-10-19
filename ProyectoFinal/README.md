@@ -8,5 +8,5 @@
 <p>Alfa en desarrollo</p>
 
 <b>*#*[Instrucciones]</b>
-<p>Mediante consola se debe asegurar de estar dentro de "ProyectoFinal\ProyectoFinal", luego para arrancar el servidor ingrese python manage.py runserver.
-Una veces arrancado el servidor "http://127.0.0.1:8000/", se debe ccompletar la rutas de acceso con "/blog/buscar_articulo.html", "/blog/buscar_autor.html" o "/blog/buscar_seccion.html" para poder consultar lo datos deseados.</p>
+<p> Mediante consola se debe asegurar de estar dentro de "ProyectoFinal\ProyectoFinal", luego para arrancar el servidor ingrese python manage.py runserver.
+Una veces arrancado el servidor "http://127.0.0.1:8000/", se debe completar la rutas de acceso con "/blog/buscar_articulo.html", "/blog/buscar_autor.html" o "/blog/buscar_seccion.html" para poder consultar lo datos deseados.</p>
