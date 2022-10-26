@@ -104,7 +104,7 @@ def buscar_autor(request):
         return HttpResponse("No enviaste datos")
     else:
         autor_a_buscar = request.GET["Autor"]
-        autores = Autor.objects.filter(Autor=autor_a_buscar)
+        autores = Autor.objects.filter(nombre=autor_a_buscar)
         
         contexto = {
             "Autor": autor_a_buscar,
@@ -118,7 +118,7 @@ def buscar_articulo(request):
         return HttpResponse("No enviaste datos")
     else:
         articulo_a_buscar = request.GET["Articulo"]
-        articulos = Articulo.objects.filter(Articulo=articulo_a_buscar)
+        articulos = Articulo.objects.filter(titulo=articulo_a_buscar)
         
         contexto = {
             "Articulo": articulo_a_buscar,
@@ -132,7 +132,7 @@ def buscar_seccion(request):
         return HttpResponse("No enviaste datos")
     else:
         seccion_a_buscar = request.GET["Seccion"]
-        secciones = Seccion.objects.filter(Seccion=seccion_a_buscar)
+        secciones = Seccion.objects.filter(nombre=seccion_a_buscar)
         
         contexto = {
             "Seccion": seccion_a_buscar,
